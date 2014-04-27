@@ -1,11 +1,31 @@
-## Put comments here that give an overall description of what your
-## functions do
+## cacheMatrix.R
 
-## Write a short comment describing this function
+## makeCacheMatrix() function allows for creation retrieval of original and inverted matrix
+## cacheSolve
+## setMatrix: usage example: cx$setMatrix(matrix(5:8,2))
+## getMatrix: shows the matrix object created with the set
+## setInverseMatrix: 
+## getInverseMatrix: 
 
 makeCacheMatrix <- function(x = matrix()) {
+     
+     invMatrix <- NULL
+     
+     setMatrix <- function(y){  ## derived from makeVector set example
+          x <<- y
+          invMatrix <<- NULL
+     }
+     
+     getMatrix <- function() {
+          x
+     }
+     list(
+          setMatrix = setMatrix,
+          getMatrix = getMatrix
+          )
+     
 
-}
+} ## end makeCacheMatrix()
 
 
 ## Write a short comment describing this function
